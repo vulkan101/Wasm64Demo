@@ -1,0 +1,2 @@
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\Microsoft.AspNetCore.Components.CustomElements.dll
+67710364-AD77-4E13-90EB-14DFA92F80D9

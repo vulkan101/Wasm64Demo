@@ -1,0 +1,13 @@
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\Microsoft.Extensions.Configuration.Json.dll
+1090ED55-0470-48EE-AD27-87442E71A31A
+6000001
+6000002
+6000003
+6000007
+6000008
+6000009
+600000a
+600000b
+600000c
+600000d
+600000e

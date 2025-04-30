@@ -30,7 +30,8 @@
     <CompressionEnabled>false</CompressionEnabled>
     <RunAOTCompilation>true</RunAOTCompilation>
     <WasmEnableThreads>false</WasmEnableThreads>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <!--<WasmEmitSourceMap>true</WasmEmitSourceMap>-->
     <!--<EmccFlags>-D NDEBUG=1 -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
     <!--<EmccFlags>-gsource-map -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
@@ -62,7 +63,8 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-D NDEBUG=1 -sMEMORY64=1  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>    
+    <EmccFlags>-D NDEBUG=1 -sMEMORY64=1  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>
+    <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -107,6 +109,10 @@
     <Content Update="wwwroot\web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 
 </Project>

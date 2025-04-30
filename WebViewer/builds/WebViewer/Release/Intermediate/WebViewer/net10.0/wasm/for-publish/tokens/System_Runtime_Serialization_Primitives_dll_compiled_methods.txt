@@ -1,0 +1,8 @@
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\System.Runtime.Serialization.Primitives.dll
+6AB2626D-F0F9-46B5-A3DE-9A53AE9289D8
+6000001
+6000002
+6000003
+6000004
+6000005
+6000006

@@ -1,0 +1,1 @@
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Output\net10.0\publish\web.config
