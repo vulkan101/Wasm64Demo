@@ -205,8 +205,6 @@ C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_fr
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\dotnet.runtime.js.map
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\dotnet.native.wmfos3ace4.wasm
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\dotnet.native.ixcvgcknun.js
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\WebViewer.lztxlqt3hr.wasm
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\WebViewer.z7fb33f1ty.pdb
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\dotnet.boot.js
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\css\app.css
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\css\dev_app.css
@@ -653,3 +651,7 @@ C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net10.0\refint\WebViewer.dll
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net10.0\WebViewer.pdb
 C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net10.0\ref\WebViewer.dll
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\WebViewer.aidamop3xw.wasm
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Output\net10.0\wwwroot\_framework\WebViewer.comlu8gl6j.pdb
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net10.0\WebViewer.AssemblyInfoInputs.cache
+C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Debug\Intermediate\WebViewer\net10.0\WebViewer.AssemblyInfo.cs

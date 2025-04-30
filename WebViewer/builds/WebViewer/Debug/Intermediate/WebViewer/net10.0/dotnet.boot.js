@@ -2,7 +2,7 @@ export const config = /*json-start*/{
   "mainAssemblyName": "WebViewer",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-F6M/7W88YJ/vJtKqEQTR3HgyG63vAGU1BeD28iHhoO8=",
+    "hash": "sha256-N+bZwwH5/9MIIGYJNuUzQ88aBOOmznDV1oZwQe2JfM0=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.dne59vs7hk.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.z4s9yrseqb.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -208,8 +208,8 @@ export const config = /*json-start*/{
       "dotnet.runtime.py96kdg2jj.js": "dotnet.runtime.js",
       "dotnet.native.wmfos3ace4.wasm": "dotnet.native.wasm",
       "dotnet.native.ixcvgcknun.js": "dotnet.native.js",
-      "WebViewer.lztxlqt3hr.wasm": "WebViewer.wasm",
-      "WebViewer.z7fb33f1ty.pdb": "WebViewer.pdb"
+      "WebViewer.aidamop3xw.wasm": "WebViewer.wasm",
+      "WebViewer.comlu8gl6j.pdb": "WebViewer.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.ixcvgcknun.js": "sha256-NhNvtKUEH/xCbw3XaHZ5REe/IQ1uEXlHN1MINr7OcU4="
@@ -421,11 +421,11 @@ export const config = /*json-start*/{
       "mscorlib.394s2p8dmh.wasm": "sha256-efXyT1H98wLiHhtkWjOoixoBuJMv1BC+9HjKU3/UG6Q=",
       "netstandard.sbyf6kj44o.wasm": "sha256-eN66PeYL9J6gvBwaCp5ieiAGSVOZICiELKCf2M7lHxc=",
       "System.Private.CoreLib.2cf6zbapn7.wasm": "sha256-3n3nhkLMhVDZ6ERKjJrMj2E6PhIuvamOLQQ5STLGXvE=",
-      "WebViewer.lztxlqt3hr.wasm": "sha256-EYMjUUVw6fo1xgHI3o82uS4u9SBr6JMclupraIExf8M="
+      "WebViewer.aidamop3xw.wasm": "sha256-HhcRMumuH0GgPJaPFWDDsWg+8t2i/C9QbQAV/Eyilj4="
     },
     "assembly": {},
     "corePdb": {
-      "WebViewer.z7fb33f1ty.pdb": "sha256-zyDaakhld09h18nr9Br+g8MEfH2H7A3wkbW3eMw6sIo="
+      "WebViewer.comlu8gl6j.pdb": "sha256-DKQz5A3HWzxS4M/hIdxRk1OhzJ3FbchalVQ/HnS5GrA="
     },
     "libraryInitializers": {
       "_content/Microsoft.AspNetCore.Components.CustomElements/Microsoft.AspNetCore.Components.CustomElements.lib.module.js": "sha256-42ntwAHGOQO7bMAUpxhBHq6olqo190V2mWSnaWYot3Y="
