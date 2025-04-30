@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "WebViewer": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\xr_dev\\Wasm64Demo\\WebViewer\\builds\\WebViewer\\Debug\\Output\\net9.0\\wwwroot",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:60496?project=test&dev=true",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:60495;http://localhost:60496",
+      "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "nativeDebugging": true
+    }
+  }
+}

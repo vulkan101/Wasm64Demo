@@ -1,0 +1,9 @@
+﻿@{
+    <canvas id="@canvasId" style="width:100%; height:100vh; overflow: hidden" tabindex="0"></canvas>
+    <script>
+        // This is not suitable for the update since the hard coding the name of the canvas for
+        // registering events prevents chainging dynamically the <a href="#"></a>
+        var target = document.getElementById("webViewRenderCanvas");
+        registerCanvasEvents(target);
+    </script>
+}
