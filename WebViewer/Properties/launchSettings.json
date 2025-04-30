@@ -2,7 +2,7 @@
   "profiles": {
     "WebViewer": {
       "commandName": "Project",
-      "workingDirectory": "C:\\xr_dev\\Wasm64Demo\\WebViewer\\builds\\WebViewer\\Debug\\Output\\net9.0\\wwwroot",
+      "workingDirectory": "builds\\WebViewer\\Debug\\Output\\net10.0\\wwwroot",
       "launchBrowser": true,
       "launchUrl": "http://localhost:60496?project=test&dev=true",
       "environmentVariables": {
