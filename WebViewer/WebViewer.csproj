@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
+    
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -18,12 +19,14 @@
     <PublishRepositoryUrl>false</PublishRepositoryUrl>
     <!-- disable wasm-opt call-->
     <WasmRunWasmOpt>false</WasmRunWasmOpt>
-    
-    <!--<RestoreAdditionalProjectSources>
+    <!--Set this to (somewhere other than the emscripten cached dir) unfreeze the cache-->
+    <WasmCachePath>C:\xr_dev\cache</WasmCachePath>
+    <WasmEnableMemory64>true</WasmEnableMemory64>
+    <RestoreAdditionalProjectSources>
       $(RestoreAdditionalProjectSources);
       C:\xr_dev\dotnetFork\runtime\artifacts\packages\Debug\Shipping;
       C:\xr_dev\dotnetFork\runtime\artifacts\bin;
-    </RestoreAdditionalProjectSources>-->
+    </RestoreAdditionalProjectSources>
 
     <CompressionEnabled>false</CompressionEnabled>
     <RunAOTCompilation>true</RunAOTCompilation>
@@ -32,18 +35,13 @@
     <!--<EmccFlags>-D NDEBUG=1 -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
     <!--<EmccFlags>-gsource-map -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
   </PropertyGroup>
-
-
-  <!--<Target Name="SetEnvironmentVariables" BeforeTargets="MyUpdateRuntimePack">
-      <Message Text="Setting Env variables:" Importance="High" />
-        <Exec Command="call C:\xr_dev\scripts\set_dotnet_env.cmd" />
-  </Target>-->
-
   
-  <Target Name="PrintEnvironmentVariables" AfterTargets="SetEnvironmentVariables">
+  <Target Name="PrintEnvironmentVariables" AfterTargets="MyUpdateRuntimePack">
     <Message Text="Environment Variables:" Importance="High" />
     <Message Text="EMSDK_PATH: $(EMSDK_PATH)" Importance="High" />
     <Message Text="EM_CONFIG: $(EM_CONFIG)" Importance="High" />
+    <Message Text="WasmCachePath: $(WasmCachePath)" Importance="High" />
+    <Message Text="WasmEnableMemory64: $(WasmEnableMemory64)" Importance="High" />
   </Target>
 
   <ItemGroup>
@@ -59,14 +57,35 @@
     
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-gsource-map  -sMEMORY64=0 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
+    <EmccFlags>-gsource-map -sMEMORY64=1 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
     <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-D NDEBUG=1 -sMEMORY64=0  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>    
+    <EmccFlags>-D NDEBUG=1 -sMEMORY64=1  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>    
   </PropertyGroup>
+
+  <PropertyGroup>
+    <EMSDK_PATH>C:\emsdk\upstream\</EMSDK_PATH>
+    <EM_CONFIG>C:\emsdk\emscripten.config</EM_CONFIG>
+    <EmscriptenSdkToolsPath>$(EMSDK_PATH)</EmscriptenSdkToolsPath>
+    <EmscriptenUpstreamBinPath>$(EmscriptenSdkToolsPath)\bin\</EmscriptenUpstreamBinPath>
+    <EmscriptenUpstreamEmscriptenPath>$(EmscriptenSdkToolsPath)emscripten\</EmscriptenUpstreamEmscriptenPath>
+    <EmscriptenVersion>$([System.IO.File]::ReadAllText('$(EmscriptenUpstreamEmscriptenPath)\emscripten-version.txt').Replace('"', ''))</EmscriptenVersion>
+    <EmscriptenRevision>$([System.IO.File]::ReadAllText('$(EmscriptenUpstreamEmscriptenPath)\emscripten-revision.txt'))</EmscriptenRevision>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmscriptenPrependPATH Include="$(EmscriptenUpstreamBinPath)" />
+    <EmscriptenPrependPATH Include="$(EmscriptenUpstreamEmscriptenPath)" />
+  </ItemGroup>
+  
+  <Target Name="MyUpdateRuntimePack" AfterTargets="ResolveFrameworkReferences">
+    <ItemGroup>
+      <ResolvedRuntimePack PackageDirectory="C:\xr_dev\dotnetFork\runtime\artifacts\bin\microsoft.netcore.app.Runtime.browser-wasm\Debug" Condition="'%(ResolvedRuntimePack.RuntimeIdentifier)' == 'browser-wasm'" />
+    </ItemGroup>
+  </Target>
   
   <ItemGroup>
     <NativeFileReference Include=".\webCanvasNative\webCanvasNative.cpp" />
