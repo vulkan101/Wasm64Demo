@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -57,13 +57,13 @@
     
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-gsource-map  -sMEMORY64=0 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB -I ../../NekoGraphics -I ../../NekoGraphics/external/zlib -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
+    <EmccFlags>-gsource-map  -sMEMORY64=0 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
     <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-D NDEBUG=1 -sMEMORY64=1  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -I ../../NekoGraphics -I ../../NekoGraphics/external/zlib -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>    
+    <EmccFlags>-D NDEBUG=1 -sMEMORY64=0  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>    
   </PropertyGroup>
 
   
