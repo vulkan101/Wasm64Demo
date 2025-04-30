@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebViewer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d493df6a341861f55bf6a2d4f40c7088c8222924")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76e633fecc21b2e29c139074deae6c77995b4693")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebViewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebViewer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
