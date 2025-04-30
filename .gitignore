@@ -3,3 +3,4 @@
 WebViewer/builds/**
 
 WebViewer/obj/
+!WebViewer/builds/WebViewer.7z
