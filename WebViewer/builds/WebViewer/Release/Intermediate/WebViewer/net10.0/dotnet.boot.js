@@ -2,7 +2,7 @@ export const config = /*json-start*/{
   "mainAssemblyName": "WebViewer",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-CwJ8WDsBeJ7d0YrhKXaoJ2iax1aIMf1mUs8bDfp23cM=",
+    "hash": "sha256-x129PXb4nhyIJdq3ooC/CHDGYGg6W2RkWOqEcfPLETY=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.dne59vs7hk.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.z4s9yrseqb.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -205,20 +205,20 @@ export const config = /*json-start*/{
       "netstandard.sbyf6kj44o.wasm": "netstandard.wasm",
       "System.Private.CoreLib.2cf6zbapn7.wasm": "System.Private.CoreLib.wasm",
       "dotnet.js": "dotnet.js",
-      "dotnet.native.blumxy3go8.js": "dotnet.native.js",
-      "dotnet.native.q2m191umg8.wasm": "dotnet.native.wasm",
-      "dotnet.runtime.py96kdg2jj.js": "dotnet.runtime.js",
-      "WebViewer.mugykl4owi.wasm": "WebViewer.wasm",
-      "WebViewer.4hnxmgmtj0.pdb": "WebViewer.pdb"
+      "dotnet.native.5knpeyrbk8.js": "dotnet.native.js",
+      "dotnet.native.tfssjhdx1q.wasm": "dotnet.native.wasm",
+      "dotnet.runtime.mo6kg27ehi.js": "dotnet.runtime.js",
+      "WebViewer.ib41u46rdi.wasm": "WebViewer.wasm",
+      "WebViewer.42ex11w8f4.pdb": "WebViewer.pdb"
     },
     "jsModuleNative": {
-      "dotnet.native.blumxy3go8.js": "sha256-oQI/1yEIrLWsdLLkmUrDtuvdS1hhJRNVRsiAReoumeY="
+      "dotnet.native.5knpeyrbk8.js": "sha256-e7aVkrkdN8+H1IPfqp8ZEgyjuWgCqjZbZ4uJIlXaoFo="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.py96kdg2jj.js": "sha256-DyAU8pZd8jDH6OBwBTyKHExlkhxOUHhA1GXyo0eCTJo="
+      "dotnet.runtime.mo6kg27ehi.js": "sha256-1qZnJlrOseBDVQ8RXsaFDsk0BVXw93tHZndD7dxISAY="
     },
     "wasmNative": {
-      "dotnet.native.q2m191umg8.wasm": "sha256-/ixgP2Qfrf7TQWlg/ZvM4oauSos1ZhrVg+QDj0VOAL0="
+      "dotnet.native.tfssjhdx1q.wasm": "sha256-+WUzgHFSnbwTEUV8PrVTY58EUCgiJSKcBu2qyiZGPcI="
     },
     "coreAssembly": {
       "Microsoft.AspNetCore.Authorization.dne59vs7hk.wasm": "sha256-ad7++/nlhkN9eKp0OtDpiVImmIWuZjsIEf80qeqW94E=",
@@ -421,11 +421,11 @@ export const config = /*json-start*/{
       "mscorlib.394s2p8dmh.wasm": "sha256-efXyT1H98wLiHhtkWjOoixoBuJMv1BC+9HjKU3/UG6Q=",
       "netstandard.sbyf6kj44o.wasm": "sha256-eN66PeYL9J6gvBwaCp5ieiAGSVOZICiELKCf2M7lHxc=",
       "System.Private.CoreLib.2cf6zbapn7.wasm": "sha256-3n3nhkLMhVDZ6ERKjJrMj2E6PhIuvamOLQQ5STLGXvE=",
-      "WebViewer.mugykl4owi.wasm": "sha256-Mi69toIx6jKKjW9VQXqOL6ZLpI6rXlsagDZQjIHRc0Q="
+      "WebViewer.ib41u46rdi.wasm": "sha256-4qUD9yO5iZiN/F6v9ycm5ucTyKo/Vl+Sq4/wrGFb0xs="
     },
     "assembly": {},
     "corePdb": {
-      "WebViewer.4hnxmgmtj0.pdb": "sha256-6FReZG3I7qGTprhlkIDDJ38pR5eZjFEyKdZX0B8xq9E="
+      "WebViewer.42ex11w8f4.pdb": "sha256-bAof1RVnDpoKWlUN5yjV+4mAUd1G91hlRXm1h9jtYCI="
     },
     "libraryInitializers": {
       "_content/Microsoft.AspNetCore.Components.CustomElements/Microsoft.AspNetCore.Components.CustomElements.lib.module.js": "sha256-42ntwAHGOQO7bMAUpxhBHq6olqo190V2mWSnaWYot3Y="

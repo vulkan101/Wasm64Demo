@@ -43,6 +43,8 @@
     <Message Text="EM_CONFIG: $(EM_CONFIG)" Importance="High" />
     <Message Text="WasmCachePath: $(WasmCachePath)" Importance="High" />
     <Message Text="WasmEnableMemory64: $(WasmEnableMemory64)" Importance="High" />
+    <Message Text="Checking emcc version:" Importance="High" />
+    <Exec Command="emcc --version" />           
   </Target>
 
   <ItemGroup>
@@ -57,7 +59,7 @@
     
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-gsource-map -sMEMORY64=1 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
+    <EmccFlags>-Wno-experimental -gsource-map -sMEMORY64=1 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
     <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 

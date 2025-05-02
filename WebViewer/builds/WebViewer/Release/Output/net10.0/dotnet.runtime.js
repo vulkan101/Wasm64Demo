@@ -11,7 +11,7 @@ var WasmEnableSIMD = true;
 
 var WasmEnableExceptionHandling = true;
 
-var gitHash = "109758183d2ba7508291d25e64209cde3678aa81";
+var gitHash = "e361003877cb06053f3387c5864cfcd1bf6cfe69";
 
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.

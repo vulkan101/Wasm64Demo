@@ -222,7 +222,7 @@ wasm_native_to_interp_System_Private_CoreLib_System_Threading_ThreadPool_Backgro
     typedef void (*InterpEntry_T0) (int*);
 
     if (!(InterpEntry_T0)wasm_native_to_interp_ftndescs [0].func) {
-        mono_wasm_marshal_get_managed_wrapper ("System.Private.CoreLib", "System.Threading", "ThreadPool", "BackgroundJobHandler", 100673061, 0);
+        mono_wasm_marshal_get_managed_wrapper ("System.Private.CoreLib", "System.Threading", "ThreadPool", "BackgroundJobHandler", 100672924, 0);
     }
 
     ((InterpEntry_T0)wasm_native_to_interp_ftndescs [0].func) ((int*)wasm_native_to_interp_ftndescs [0].arg);
@@ -279,7 +279,7 @@ wasm_native_to_interp_System_Private_CoreLib_System_Threading_TimerQueue_TimerHa
     typedef void (*InterpEntry_T5) (int*);
 
     if (!(InterpEntry_T5)wasm_native_to_interp_ftndescs [5].func) {
-        mono_wasm_marshal_get_managed_wrapper ("System.Private.CoreLib", "System.Threading", "TimerQueue", "TimerHandler", 100673076, 0);
+        mono_wasm_marshal_get_managed_wrapper ("System.Private.CoreLib", "System.Threading", "TimerQueue", "TimerHandler", 100672939, 0);
     }
 
     ((InterpEntry_T5)wasm_native_to_interp_ftndescs [5].func) ((int*)wasm_native_to_interp_ftndescs [5].arg);
@@ -297,11 +297,11 @@ wasm_native_to_interp_WebViewer_WebViewer_WebCanvasInterop_WheelEventDispatcher 
 }
 
 static UnmanagedExport wasm_native_to_interp_table[] = {
-    {"BackgroundJobHandler#0:System.Private.CoreLib:System.Threading:ThreadPool", 100673061, wasm_native_to_interp_System_Private_CoreLib_System_Threading_ThreadPool_BackgroundJobHandler},
+    {"BackgroundJobHandler#0:System.Private.CoreLib:System.Threading:ThreadPool", 100672924, wasm_native_to_interp_System_Private_CoreLib_System_Threading_ThreadPool_BackgroundJobHandler},
     {"GetFunctionPointer#6:System.Private.CoreLib:Internal.Runtime.InteropServices:ComponentActivator", 100663453, wasm_native_to_interp_System_Private_CoreLib_Internal_Runtime_InteropServices_ComponentActivator_GetFunctionPointer},
     {"KeyboardEventDispatcher#3:WebViewer:WebViewer:WebCanvasInterop", 100663313, wasm_native_to_interp_WebViewer_WebViewer_WebCanvasInterop_KeyboardEventDispatcher},
     {"MouseEventsDispatcher#4:WebViewer:WebViewer:WebCanvasInterop", 100663310, wasm_native_to_interp_WebViewer_WebViewer_WebCanvasInterop_MouseEventsDispatcher},
     {"ResizeEventDispatcher#2:WebViewer:WebViewer:WebCanvasInterop", 100663312, wasm_native_to_interp_WebViewer_WebViewer_WebCanvasInterop_ResizeEventDispatcher},
-    {"TimerHandler#0:System.Private.CoreLib:System.Threading:TimerQueue", 100673076, wasm_native_to_interp_System_Private_CoreLib_System_Threading_TimerQueue_TimerHandler},
+    {"TimerHandler#0:System.Private.CoreLib:System.Threading:TimerQueue", 100672939, wasm_native_to_interp_System_Private_CoreLib_System_Threading_TimerQueue_TimerHandler},
     {"WheelEventDispatcher#4:WebViewer:WebViewer:WebCanvasInterop", 100663311, wasm_native_to_interp_WebViewer_WebViewer_WebCanvasInterop_WheelEventDispatcher}
 };
