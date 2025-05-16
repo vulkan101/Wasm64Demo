@@ -10,7 +10,36 @@
       },
       "applicationUrl": "https://localhost:60495;http://localhost:60496",
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+      "nativeDebugging": true,
+      "hotReloadEnabled": false
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "workingDirectory": "builds\\WebViewer\\Debug\\Output\\net10.0\\wwwroot",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:60496?project=test&dev=true",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
       "nativeDebugging": true
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:60496/?project=test&dev=true",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:60495;http://localhost:60496"
+      },
+      "distributionName": ""
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:60496",
+      "sslPort": 44346
     }
   }
 }

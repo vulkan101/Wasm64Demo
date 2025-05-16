@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -13,18 +13,22 @@
     <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
     <DefineConstants>$(DefineConstants);__NX__;__EMSCRIPTEN__</DefineConstants>
     
+    <TargetFrameworkMoniker>.NETCoreApp,Version=v10.0</TargetFrameworkMoniker>
+    <NuGetTargetMoniker>.NETCoreApp,Version=v10.0</NuGetTargetMoniker>
+    
     <InvariantGlobalization>true</InvariantGlobalization>
     <!-- Don't publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
-    <PublishRepositoryUrl>false</PublishRepositoryUrl>
+    <!--<PublishRepositoryUrl>false</PublishRepositoryUrl>-->
     <!-- disable wasm-opt call-->
     <WasmRunWasmOpt>false</WasmRunWasmOpt>
     <!--Set this to (somewhere other than the emscripten cached dir) unfreeze the cache-->
     <WasmCachePath>C:\xr_dev\cache</WasmCachePath>
-    <WasmEnableMemory64>true</WasmEnableMemory64>
+    <WasmEnableMemory64>false</WasmEnableMemory64>
+    
     <RestoreAdditionalProjectSources>
       $(RestoreAdditionalProjectSources);
       C:\xr_dev\dotnetFork\runtime\artifacts\packages\Debug\Shipping;
-      C:\xr_dev\dotnetFork\runtime\artifacts\bin;
+      <!--C:\xr_dev\dotnetFork\runtime\artifacts\bin;-->
     </RestoreAdditionalProjectSources>
 
     <CompressionEnabled>false</CompressionEnabled>
@@ -32,7 +36,7 @@
     <WasmEnableThreads>false</WasmEnableThreads>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-    <!--<WasmEmitSourceMap>true</WasmEmitSourceMap>-->
+    <WasmEmitSourceMap>true</WasmEmitSourceMap>
     <!--<EmccFlags>-D NDEBUG=1 -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
     <!--<EmccFlags>-gsource-map -sFETCH -sFULL_ES3=1 -sMEMORY64=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>-->
   </PropertyGroup>
@@ -59,13 +63,13 @@
     
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-Wno-experimental -gsource-map -sMEMORY64=1 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>
+    <EmccFlags>-sUSE_CLOSURE_COMPILER=1 -Wno-experimental -gsource-map -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB  -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype </EmccFlags>    
     <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <RunAOTCompilation>True</RunAOTCompilation>
-    <EmccFlags>-D NDEBUG=1 -sMEMORY64=1  -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=8GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>
+    <EmccFlags>-sUSE_CLOSURE_COMPILER=1 -D NDEBUG=0 -sFETCH -sFULL_ES3=1 -sMAX_WEBGL_VERSION=2 -sMIN_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH -sMAXIMUM_MEMORY=4GB -Wno-unused-value -Wno-unused-command-line-argument -Wno-writable-strings -Wno-deprecated-non-prototype</EmccFlags>
     <DefineConstants>$(DefineConstants);__EMSCRIPTEN__</DefineConstants>
   </PropertyGroup>
 
@@ -86,7 +90,16 @@
   
   <Target Name="MyUpdateRuntimePack" AfterTargets="ResolveFrameworkReferences">
     <ItemGroup>
-      <ResolvedRuntimePack PackageDirectory="C:\xr_dev\dotnetFork\runtime\artifacts\bin\microsoft.netcore.app.Runtime.browser-wasm\Debug" Condition="'%(ResolvedRuntimePack.RuntimeIdentifier)' == 'browser-wasm'" />
+      <ResolvedRuntimePack PackageDirectory="C:\xr_dev\dotnetFork\runtime\artifacts\bin\microsoft.netcore.app.Runtime.browser-wasm\Debug" Condition="'%(ResolvedRuntimePack.FrameworkName)' == 'Microsoft.NETCore.App'" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="UpdateSdkPack" BeforeTargets="ProcessFrameworkReferences">
+    <Message Text="UpdatingSDKPack:" Importance="High" />
+    <ItemGroup>
+      <KnownWebAssemblySdkPack Update="Microsoft.NET.Sdk.WebAssembly.Pack">
+        <WebAssemblySdkPackVersion Condition="'%(TargetFramework)' == 'net10.0'">10.0.0-dev</WebAssemblySdkPackVersion>
+      </KnownWebAssemblySdkPack>
     </ItemGroup>
   </Target>
   
