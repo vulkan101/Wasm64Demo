@@ -1,2 +1,0 @@
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\System.Xml.ReaderWriter.dll
-085C928D-1DFF-49A6-B571-9CEDBC85D1F1

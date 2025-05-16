@@ -1,2 +1,0 @@
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\System.Xml.XDocument.dll
-6B79012B-393B-4877-93A2-B62A46B72504

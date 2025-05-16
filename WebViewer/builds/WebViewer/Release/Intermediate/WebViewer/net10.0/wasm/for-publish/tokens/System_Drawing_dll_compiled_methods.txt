@@ -1,2 +1,0 @@
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\System.Drawing.dll
-2C9F3031-9FB9-4F83-971E-626F7BCB71E2

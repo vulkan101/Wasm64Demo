@@ -1,2 +1,0 @@
-C:\xr_dev\Wasm64Demo\WebViewer\builds\WebViewer\Release\Intermediate\WebViewer\net10.0\wasm\for-publish\aot-in\System.Runtime.InteropServices.dll
-DD5E7BEA-0BC2-4E39-967A-36B1616EC44D
