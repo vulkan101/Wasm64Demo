@@ -29,6 +29,7 @@
       $(RestoreAdditionalProjectSources);
       C:\xr_dev\dotnetFork\runtime\artifacts\packages\Debug\Shipping;
       C:\xr_dev\dotnetFork\runtime\artifacts\bin;
+      C:\Users\mike.hudson\.nuget\packages;
     </RestoreAdditionalProjectSources>
 
     <CompressionEnabled>false</CompressionEnabled>
