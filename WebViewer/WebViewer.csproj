@@ -23,7 +23,7 @@
     <WasmRunWasmOpt>false</WasmRunWasmOpt>
     <!--Set this to (somewhere other than the emscripten cached dir) unfreeze the cache-->
     <WasmCachePath>C:\xr_dev\cache</WasmCachePath>
-    <WasmEnableMemory64>false</WasmEnableMemory64>
+    <WasmEnableMemory64>true</WasmEnableMemory64>
     
     <RestoreAdditionalProjectSources>
       $(RestoreAdditionalProjectSources);
